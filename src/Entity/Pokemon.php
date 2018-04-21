@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PokemonRepository")
+ * @ORM\Table(name="pokemons")
  */
 class Pokemon
 {
@@ -35,6 +36,13 @@ class Pokemon
      */
     private $height;
 
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+
+    }
     public function getId()
     {
         return $this->id;
@@ -87,4 +95,7 @@ class Pokemon
 
         return $this;
     }
+
+
 }
+
