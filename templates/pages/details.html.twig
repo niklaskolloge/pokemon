@@ -1,0 +1,23 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pokemon Detail Ansicht</h1>
+
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>{{ pokemon.name}}</td>
+        </tr>
+        <tr>
+            <td>Gewicht:</td>
+            <td>{{ pokemon.weight}}</td>
+        </tr>
+        <tr>
+            <td>Höhe:</td>
+            <td>{{ pokemon.height }}</td>
+        </tr>
+    </table>
+
+
+{% endblock %}
