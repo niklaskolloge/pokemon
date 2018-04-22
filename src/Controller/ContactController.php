@@ -8,6 +8,7 @@ use App\Services\MailerService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Annotation;
 
 class ContactController extends Controller
 {
@@ -21,6 +22,15 @@ class ContactController extends Controller
     {
         $enquiry = new Enquiry();
         $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if($request->getMethod() == Request::METHOD_POST){
+            $form->handleRequest($request);
+
+            if($form->isValid()){
+                $mailerService->sendContactMail($enquiry);
+                return $this->redirectToRoute('contact');
+            }
+        }
 
         return $this->render('contact/index.html.twig', ['form' => $form->createView()]);
     }
