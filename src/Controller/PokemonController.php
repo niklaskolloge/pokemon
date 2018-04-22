@@ -11,24 +11,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class PokemonController extends Controller
 {
     /**
-     * @Route(path="/ersteseite", name="pokemonerste_index")
+     * @Route(path="/", name="pokemonoverview")
      * @return Response
      */
     public function indexAction(EntityManagerInterface $entityManager): Response
     {
-        $name = 'auf der ersten Seite';
-
-        $pokemon = new Pokemon();
-        $pokemon->setId(1);
-        $pokemon->setName("Bisasam");
-        $pokemon->setHeight(20);
-        $pokemon->setWeight(30);
-        $pokemon->setImage("bild");
-
-        $entityManager->persist($pokemon);
-        $entityManager->flush();
-
-        return $this->render('pages/index.html.twig', ['name' => $name, 'pokemon' => $pokemon]);
+        $repository = $entityManager->getRepository(Pokemon::class);
+        $pokemons = $repository->findAll();
+        return $this->render('pages/index.html.twig', ['pokemons' => $pokemons]);
     }
 
     /**
