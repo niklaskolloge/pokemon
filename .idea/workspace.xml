@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ae2a630-7dd2-46da-b469-d77cb359bda3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pages/pokemon_table.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PokemonController.php" afterPath="$PROJECT_DIR$/src/Controller/PokemonController.php" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/details.html.twig" afterPath="$PROJECT_DIR$/templates/pages/details.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +54,7 @@
       <file leaf-file-name="PokemonController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/PokemonController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="153">
               <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding>
                 <element signature="e#34#57#0#PHP" expanded="true" />
@@ -67,11 +63,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PokemonRestAPIController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PokemonService.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Services/PokemonService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="973">
+              <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+              <folding>
+                <element signature="e#30#53#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokemonRestAPIController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/PokemonRestAPIController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+              <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding>
                 <element signature="e#34#57#0#PHP" expanded="true" />
               </folding>
@@ -150,6 +158,7 @@
         <option value="$PROJECT_DIR$/templates/pages/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/PokemonRestAPIController.php" />
         <option value="$PROJECT_DIR$/src/Controller/PokemonController.php" />
+        <option value="$PROJECT_DIR$/src/Services/PokemonService.php" />
       </list>
     </option>
   </component>
@@ -258,7 +267,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-13" />
     <option name="y" value="-13" />
     <option name="width" value="3026" />
@@ -314,24 +323,6 @@
             <path>
               <item name="schoenesprojekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="schoenesprojekt" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="schoenesprojekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="schoenesprojekt" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="schoenesprojekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="schoenesprojekt" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="schoenesprojekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="schoenesprojekt" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -381,12 +372,12 @@
       <updated>1523883574867</updated>
       <workItem from="1523883577507" duration="214000" />
       <workItem from="1524296963808" duration="5018000" />
-      <workItem from="1524383006901" duration="6297000" />
+      <workItem from="1524383006901" duration="6961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21669000" />
+    <option name="totallyTimeSpent" value="22333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,7 +389,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
+    <frame x="-13" y="-13" width="3026" height="1946" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -772,9 +763,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PokemonRestAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <element signature="e#34#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PokemonController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="153">
           <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#34#57#0#PHP" expanded="true" />
@@ -782,12 +783,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PokemonRestAPIController.php">
+    <entry file="file://$PROJECT_DIR$/src/Services/PokemonService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        <state relative-caret-position="973">
+          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding>
-            <element signature="e#34#57#0#PHP" expanded="true" />
+            <element signature="e#30#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

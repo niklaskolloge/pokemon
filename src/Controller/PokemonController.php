@@ -28,7 +28,7 @@ class PokemonController extends Controller
     public function indexTwoAction(EntityManagerInterface $entityManager): Response
     {
 
-        for ($id = 209; $id < 803; $id++) {
+        for ($id = 210; $id < 803; $id++) {
             try {
                 $apiResponse = json_decode(file_get_contents("http://pokeapi.co/api/v2/pokemon/$id"), true);
 
@@ -42,7 +42,7 @@ class PokemonController extends Controller
                 $entityManager->persist($pokemon);
                 $entityManager->flush();
             } catch (\Exception $e) {
-                return new Response("No Pokemon found for this ID");
+                return new Response($e);
             }
         }
         return Response("done");
