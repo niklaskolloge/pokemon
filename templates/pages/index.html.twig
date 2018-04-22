@@ -3,30 +3,7 @@
 {% block body %}
     <h1>Pokemon Übersicht</h1>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Bild</th>
-            <th>Gewicht</th>
-            <th>Größe</th>
-            <th>Aktion</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for pokemon in pokemons %}
-            <tr>
-                <th>{{ pokemon.id }}</th>
-                <td>{{ pokemon.name }}</td>
-                <td><img src="{{ pokemon.image }}"></td>
-                <td>{{ pokemon.weight }}</td>
-                <td>{{ pokemon.height }}</td>
-                <td><a class="btn btn-primary" href="{{ path('pokemondetails', {'id': pokemon.id}) }}">Details</a> </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% include 'pages/pokemon_table.html.twig' %}
 
 
 {% endblock %}

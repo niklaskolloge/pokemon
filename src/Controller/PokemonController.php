@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\Pokemon;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\httpFoundation\Response;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PokemonController extends Controller
@@ -22,17 +22,30 @@ class PokemonController extends Controller
     }
 
     /**
-     * @Route(path="/zweiteseite", name="pokemonzweite_index")
+     * @Route(path="/pokemoncrawler", name="pokemonzweite_index")
      * @return Response
      */
     public function indexTwoAction(EntityManagerInterface $entityManager): Response
     {
 
-        $repository = $entityManager->getRepository(Pokemon::class);
-        $pokemon = $repository->find(1);
+        for ($id = 209; $id < 803; $id++) {
+            try {
+                $apiResponse = json_decode(file_get_contents("http://pokeapi.co/api/v2/pokemon/$id"), true);
 
-        $name = 'auf der zweiten Seite';
-        return $this->render('pages/index.html.twig', ['name' => $name, 'pokemon' => $pokemon]);
+                $pokemon = new Pokemon();
+                $pokemon->setId($apiResponse['id']);
+                $pokemon->setName($apiResponse['name']);
+                $pokemon->setImage($apiResponse['sprites']['front_default']);
+                $pokemon->setWeight($apiResponse['weight']);
+                $pokemon->setHeight($apiResponse['height']);
+
+                $entityManager->persist($pokemon);
+                $entityManager->flush();
+            } catch (\Exception $e) {
+                return new Response("No Pokemon found for this ID");
+            }
+        }
+        return Response("done");
     }
 
     /**
