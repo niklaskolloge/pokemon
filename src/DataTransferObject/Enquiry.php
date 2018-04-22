@@ -1,8 +1,7 @@
 <?php
 
-namespace App\DataTransferObject
+namespace App\DataTransferObject;
 
-use Sympfony\Component\Validator\Constraints as Assert;
 
 class Enquiry
 {
@@ -23,7 +22,73 @@ class Enquiry
     protected $subject;
 
     /**
-     * @Assert\Length(message="Gib bitte deine Nachricht ein.")
+     * @Assert\Length(min="10", minMessage="Die Nachricht sollte mindestens 10 Zeichen sein.")
      */
     protected $body;
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @param mixed $subject
+     */
+    public function setSubject($subject): void
+    {
+        $this->subject = $subject;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
+     * @param mixed $body
+     */
+    public function setBody($body): void
+    {
+        $this->body = $body;
+    }
+
+
 }
